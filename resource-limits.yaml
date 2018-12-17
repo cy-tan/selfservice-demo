@@ -4,11 +4,10 @@ metadata:
   name: "resource-limits" 
 spec:
   limits:
-    -
-      type: "Container"
+    - type: "Container"
       max:
         cpu: "200m" 
-        memory: "512Mi" 
+        memory: "250Mi" 
       defaultRequest:
         cpu: "100m" 
         memory: "150Mi"
