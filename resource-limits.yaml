@@ -7,7 +7,7 @@ spec:
     - type: "Container"
       max:
         cpu: "200m" 
-        memory: "250Mi" 
+        memory: "512Mi" 
       defaultRequest:
         cpu: "100m" 
         memory: "150Mi"
