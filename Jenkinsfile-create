@@ -17,10 +17,3 @@ node {
 	//	sh "oc create -f limits.json -n ${uid}-workspace"
     //}
 }
-
-node {
-	stage("Remove Workspace") {
-	    echo "Deleting Projects"
-        sh "oc delete project ${uid}-workspace"
-    }
-}
