@@ -1,0 +1,14 @@
+echo 'apiVersion: "v1"
+kind: "LimitRange"
+metadata:
+  name: "resource-limits" 
+spec:
+  limits:
+    -
+      type: "Container"
+      max:
+        cpu: "200m" 
+        memory: "512Mi" 
+      defaultRequest:
+        cpu: "100m" 
+        memory: "150Mi" ' | oc create -f -
