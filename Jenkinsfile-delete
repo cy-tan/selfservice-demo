@@ -1,0 +1,6 @@
+node {
+	stage("Remove Workspace") {
+	    echo "Deleting Projects"
+        sh "oc delete project ${uid}-workspace"
+    }
+}
