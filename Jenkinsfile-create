@@ -9,9 +9,9 @@ node {
     }
     stage("Set Quota") {
 	echo "Setting quota for the project"
-	echo "${limit-mem}"
-	echo "${limit-cpu}"
-        sh "oc create quota projectquota --hard=limits.memory='${limit-mem}',limits.cpu='${limit-cpu}' -n ${uid}-workspace"
+	echo "${limitmem}"
+	echo "${limitcpu}"
+        sh "oc create quota projectquota --hard=limits.memory=${limitmem},limits.cpu=${limitcpu} -n ${uid}-workspace"
     }
     stage("Set Limits") {
 	echo "Setting quota for the project"
